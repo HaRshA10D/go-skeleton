@@ -11,8 +11,6 @@ func initPingRoutes(router *mux.Router) {
 
 func handlePing() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-
-		w.WriteHeader(http.StatusOK)
-		_, _ = w.Write([]byte(`pong`))
+		writeToBody(w, []byte(`pong`), http.StatusOK)
 	}
 }
