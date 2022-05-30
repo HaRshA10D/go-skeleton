@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/user-name/skeleton-name/cmd"
+	"log"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	err := cmd.Execute()
+	if err != nil {
+		log.Fatalln(fmt.Sprintf("failed to start the app: %v", err))
+	}
 }
