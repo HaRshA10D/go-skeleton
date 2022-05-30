@@ -16,7 +16,8 @@ A model project with base setup.
 
 ### Dependencies
 
-* [Viper](https://github.com/spf13/viper) for config reading from file and env variables 
+* [Viper](https://github.com/spf13/viper) for config reading from file and env variables
+* [Cobra](https://github.com/spf13/cobra) for command line support
 
 ### Contributors
 
