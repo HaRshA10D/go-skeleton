@@ -23,7 +23,7 @@ func InitializeApp() (*App, error) {
 	app.repository = app.setupRepository()
 	app.useCases = app.setupServices()
 
-	router := handler.NewRouter()
+	router := handler.NewRouter(app.useCases)
 
 	app.server = pkghttp.NewServer(app.config.Server, router)
 	return &app, nil

@@ -18,6 +18,7 @@ A model project with base setup.
 
 * [Viper](https://github.com/spf13/viper) for config reading from file and env variables
 * [Cobra](https://github.com/spf13/cobra) for command line support
+* [Mux](https://github.com/gorilla/mux) for http router
 
 ### Contributors
 
