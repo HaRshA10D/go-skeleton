@@ -70,7 +70,9 @@ func (s *server) waitForSignal() {
 func gracefulShutdown(s *server) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Duration(s.config.ShoutDownTimeout)*time.Second)
 	defer cancel()
-	s.downFunc(ctx)
+	if s.downFunc != nil {
+		s.downFunc(ctx)
+	}
 	if err := s.s.Shutdown(ctx); err != nil {
 		log.Fatalf("error in shutting down server: %s", err)
 	}

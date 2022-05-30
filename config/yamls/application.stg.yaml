@@ -1,3 +1,9 @@
 LogLevel: "debug"
+Server:
+  Port: 9001
+  ReadTimeout: 30
+  WriteTimeout: 30
+  IdleTimeout: 30
+  ShoutDownTimeout: 60
 NetworkClient:
   TimeoutInMS: 15000

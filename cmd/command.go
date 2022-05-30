@@ -29,4 +29,5 @@ func addCommands() {
 	// will be called from main before root command executes
 	// check example - version command
 	rootCmd.AddCommand(versionCmd)
+	rootCmd.AddCommand(serverCmd)
 }
